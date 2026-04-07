@@ -1,0 +1,39 @@
+{
+  "name": "devtron-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Devtron CD platform — GitLab Duo integration",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "start": "node dist/index.js",
+    "start:http": "node dist/index-http.js",
+    "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
+    "dev:http": "nodemon --exec node --loader ts-node/esm src/index-http.ts",
+    "test": "vitest run --config vitest.config.ts",
+    "test:watch": "vitest --config vitest.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "axios": "^1.14.0",
+    "dotenv": "^16.6.1",
+    "winston": "^3.19.0",
+    "zod": "^4.3.6",
+    "zod-to-json-schema": "^3.25.2"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.3",
+    "@types/node": "^25.5.2",
+    "@types/winston": "^2.4.4",
+    "@vitest/coverage-v8": "^4.1.2",
+    "nodemon": "^3.1.14",
+    "rimraf": "^6.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  }
+}
