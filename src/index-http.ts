@@ -17,7 +17,7 @@ import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/
 import { logger } from './utils/logger.js';
 import { config } from './config/index.js';
 
-const PORT = Number(process.env.MCP_PORT ?? 3000);
+const PORT = Number(process.env.PORT ?? process.env.MCP_PORT ?? 3000);
 
 async function main(): Promise<void> {
   const mcpServer = await createServer();

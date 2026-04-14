@@ -1,0 +1,8 @@
+{
+    "gitlab.duoAgentPlatform.defaultNamespace": "devtron",
+    "gitlab.duoAgentPlatform.enabled": true,
+    "gitlab.duoChat.enabled": true,
+    "gitlab.duoCodeSuggestions.enabled": true,
+    "gitlab.featureFlags.flowBuilder": true,
+    "gitlab.debug": true
+}

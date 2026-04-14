@@ -98,6 +98,7 @@ describe('DevtronService', () => {
 
       const result = await service.rollbackDeployment({
         appId: 42,
+        envId: 1,
         pipelineId: 101,
         deploymentId: 500,
       });
